@@ -1,211 +1,90 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .clear {
-    clear: left;
-  }
-  
-/* INI HEADER */
-  header {
-    height: 65px;
-    width: 100%;
-    background-color: teal;
-    position :fixed;
-    top: 0;
-    z-index: 10;
-  }
-
-  .container {
-    max-width: 1170px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
-
-  .container p {
-    text-align: justify;
-    
-  }
-
-  .header-left {
-    float: left;
-  }
-
-  .logo {
-    width: 124px;
-    margin-top: 20px;
-    -webkit-user-select: none;
-    margin: auto;
-  }
-  
-  .menu-icon {
-    color: white;
-    float: right;
-    font-size: 25px;
-    padding: 21px 0;
-    display: none;
-    
-  }
-
-  .header-right {
-    float: right;
-    margin-right: -25px;
-  }
-  
-  .header-right a {
-    line-height: 65px;
-    padding: 0 25px;
-    color: white;
-    display: block;
-    float: left;
-    transition: all 0.5s;
-  }
-  
-  .header-right a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-
-/* INI MAIN */
-
-  /* INI TOP */
-  .top-content {
-    padding: 180px 0 100px 0;
-    background-color: rgba(34, 49, 52, 0.9);
-    background-size: cover;
-    background-position: top;
-    color: white;
-    text-align: center;
-    position: relative;
-  }
-  
-  .top-content h1 {
-    opacity: 1;
-    font-size: 45px;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .top-content p {
-    opacity: 1;
-    margin-bottom: 3px;
-  }
-
-  .top-content-container {
-    text-align-last: center;
-    
-  }
-  /* INI CONTENT */
-  .content {
-    padding-bottom: 40px;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #f7f7f7;
-  }
-  
-  .heading {
-    padding-top: 15px;
-    padding-bottom: 20px;
-    color: #000;
-    text-align: center;
-  }
-  
-  .heading h2 {
-    font-weight: normal;
-    font-size: 40px;
-  }
-
-  .heading p {
-    font-size: 18px;
-    text-align: center;
-  }
-  
-  /* INI ARTICLE */
-  article {
-    float: left;
-    width: 70%;
-    text-align: center;
-    font-size: 18px;
-    padding-left: 100px;
-  }
-
-  article p {
-    text-align: justify;
-  }
-
-  .heading-contents {
-    text-align: center;
-    padding-left: 80px;
-  }
-  
-  .image-icon {
-    width: 30%;
-    height: auto;
-    padding-left: 10px;
-    float: left;
-  }
-  
- 
-
-  /* INI ASIDE */
-aside {
-  width: 30%;
-  float: right;
-  text-align: center;
-  }
-
-.card {
-  padding: 20px 40px;
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: black;
 }
 
-.image-card {
-   width: 60%;
-    height: auto;
+#container{
+  width: 1000px;
+  height: 550px;
+  background-image: linear-gradient(rgba(0,0,0,0.3)rgba(0,0,0,0.3)), url(bgimg-jpg); 
+  margin: 20px auto;
 }
 
-.testimonial {
-    font-style: italic;
+#calculator {
+  width: 320px;
+  height: 520px;
+  background-color: #eaedef;
+  margin: 0 auto;
+  top: 20px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.about span{
-   text-decoration: line-through;
+#result{
+  height: 120px;
 }
 
-
-/* INI FOOTER */
-footer {
-  width: 100%;
-  background-color: teal;
-  overflow: auto;
-  text-align: center;
-  line-height: 0;
+#history {
+  text-align: right;
+  height: 20px;
+  margin: 0 20px;
+  padding-top: 20px;
+  font-size: 15px;
+  color: #919191;
 }
 
-footer a {
-  color: #fff;
+#output {
+  text-align: right;
+  height: 60px;
+  margin: 10px 20px;
+  font-size: 30px;
 }
 
-footer a:hover {
-  color: #2196f3;
+#keyboard{
+  height: 400px;
 }
 
-.copyright {
-  float: right;
-  padding: 20px 20px 10px 20px;
-  color: #f7f7f7;
-}
-  
-.sponsor {
+.operator, .number, .empty {
+  width: 50px;
+  height: 50px;
+  margin: 15px;
   float: left;
-  color: #f7f7f7;
-  padding: 20px 20px 10px 20px; 
+  border-radius: 50%;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.number, .empty{
+	background-color: #eaedef;
+}
+.number, .operator{
+	cursor: pointer;
+}
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+button:nth-child(4){
+	font-size: 20px;
+	background-color: #20b2aa;
+}
+button:nth-child(8){
+	font-size: 20px;
+	background-color: #ffa500;
+}
+button:nth-child(12){
+	font-size: 20px;
+	background-color: #f08080;
+}
+button:nth-child(16){
+	font-size: 20px;
+	background-color: #7d93e0;
+}
+button:nth-child(20){
+	font-size: 20px;
+	background-color: #9477af;
 }
